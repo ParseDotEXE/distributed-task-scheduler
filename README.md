@@ -1,6 +1,8 @@
 # Distributed Task Scheduler with Priority Queuing 
 
 A web-based Java made task scheduler where users can submit tasks with priorities and deadlines. The system processes tasks in a distributed manner, ensuring high-priority tasks are handled first.
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Java Version](https://img.shields.io/badge/Java-17-blue)
 
 ## Architecture
 
