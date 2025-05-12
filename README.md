@@ -313,6 +313,3 @@ This project is a personal portfolio project and is not accepting contributions 
 ---
 
 Project developed by Parsa Rahimnia
-
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![Java Version](https://img.shields.io/badge/Java-17-blue)
