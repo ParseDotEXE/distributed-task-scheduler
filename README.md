@@ -13,7 +13,30 @@ This project implements a distributed architecture with the following components
 
 ### System Design
 
-![System Architecture](https://placeholder-for-architecture-diagram.com/diagram.png)
+```
++-------------------+      +--------------------+      +----------------+
+| TaskController    |----->| TaskSubmission     |----->| TaskRepository |
+| (API Endpoint)    |      | Service            |      | (Data Storage) |
++-------------------+      +--------------------+      +----------------+
+         |                           |                          ^
+         v                           v                          |
++-------------------+      +--------------------+               |
+| QueueController   |----->| AWS SQS            |               |
+| (Queue Management)|      | (Message Queue)    |               |
++-------------------+      +--------------------+               |
+         ^                           |                          |
+         |                           v                          |
++-------------------+      +--------------------+               |
+| SchedulerController|<----| PriorityScheduler  |---------------+
+| (Task Execution)   |      | (Task Ordering)    |
++-------------------+      +--------------------+
+         |
+         v
++-------------------+      
+| TaskStatusController|     
+| (Status Updates)   |      
++-------------------+
+```
 
 ### Why SQS over SNS?
 
